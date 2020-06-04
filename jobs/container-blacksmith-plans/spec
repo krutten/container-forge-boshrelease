@@ -5,12 +5,12 @@ packages: []
 templates: 
   bin/configure-blacksmith: bin/configure-blacksmith
 
-  plans/service.yml:        plans/service.yml
+  plans/service.yml:                plans/service.yml
 
   # Standalone plan for a Docker Container
-  plans/standalone/manifest.yml
-  plans/standalone/credentials.yml
-  plans/standalone/init
+  plans/standalone/manifest.yml:    plans/standalone/manifest.yml
+  plans/standalone/credentials.yml: plans/standalone/credentials.yml
+  plans/standalone/init:            plans/standalone/init
 
 
 properties:
