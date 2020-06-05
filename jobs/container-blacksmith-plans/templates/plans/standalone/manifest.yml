@@ -4,9 +4,8 @@ meta:
   default:
     az: z1
   service:
-    username: (( vault $CREDENTIALS "/container:username" ))
-    password: (( vault $CREDENTIALS "/container:password" ))
-    port: 5432
+    username: (( vault $CREDENTIALS "/containers:username" ))
+    password: (( vault $CREDENTIALS "/containers:password" ))
 
 releases:
   - name:    containers
@@ -26,7 +25,7 @@ update:
   update_watch_time: 1000-30000
 
 instance_groups:
-  - name: containerql
+  - name: containers
     instances: 1
     azs: [(( grab meta.az || meta.default.az ))]
     networks: [name: (( grab meta.net ))]
@@ -36,8 +35,8 @@ instance_groups:
     persistent_disk: (( grab meta.disk ))
 
     jobs:
-      - name:    container
-        release: container
+      - name:    containers
+        release: containers
         properties:
           container:
             config:

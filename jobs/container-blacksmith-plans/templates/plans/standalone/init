@@ -1,0 +1,8 @@
+
+#!/bin/bash
+set -eu
+
+safe gen -l 16 ${CREDENTIALS}/containers username
+safe gen       ${CREDENTIALS}/containers password
+
+exit 0
