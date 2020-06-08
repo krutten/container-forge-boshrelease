@@ -35,7 +35,7 @@ instance_groups:
     persistent_disk: (( grab meta.disk ))
 
     jobs:
-      - name:    containers
+      - name:    docker
         release: containers
         properties:
           container:
